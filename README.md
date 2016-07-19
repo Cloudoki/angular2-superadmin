@@ -3,8 +3,7 @@ Angular2 starter with webpack
 
 ## Features
 - Webpack;
-- CSS pre-compile through SASS;
-- SASS and JS minification and concatenation;
+- Oauth2 authentication flow;
 
 ## Requirements
 - [nodejs](https://nodejs.org/)
