@@ -34,3 +34,5 @@ If you are having errors try deleting the **node_modules** folder and run `npm i
 **npm run build** to bundle all your files to the /dist folder.
 
 **npm run static** and open your browser at `http://127.0.0.1:8090/`.
+
+Run `npm install -g http-server` or add it to your dependencies if you want it local.
