@@ -1,16 +1,18 @@
 {
+  "author": "Nuno Jorge",
+  "license": "MIT",
+  "email": "nuno@cloudoki.com",
   "name": "angular2-webpack",
   "version": "1.0.0",
   "description": "A webpack starter for angular 2",
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --port 8080",
-    "test": "karma start",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "start": "set NODE_ENV=development && webpack-dev-server --inline --progress --port 8080",
+    "test": "set NODE_ENV=test && karma start",
+    "build": "set NODE_ENV=production && rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "clean": "rimraf dist",
     "static": "http-server dist -p 8090 -o",
     "postinstall": "typings install"
   },
-  "license": "MIT",
   "dependencies": {
     "@angular/common": "^2.0.0-rc.4",
     "@angular/compiler": "^2.0.0-rc.4",
