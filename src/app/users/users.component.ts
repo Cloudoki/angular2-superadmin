@@ -5,11 +5,11 @@ import { User } from './user';
 import * as _ from 'lodash';
 
 @Component({
-    selector: 'app-users',
-    providers: [UsersService],
-    directives: [MenuComponent],
-    templateUrl: './users.component.html',
-    styles: [require('./users.component.scss').toString()]
+  selector: 'app-users',
+  providers: [UsersService],
+  directives: [MenuComponent],
+  templateUrl: './users.component.html',
+  styles: [require('./users.component.scss').toString()]
 })
 export class UsersComponent {  
   private componentName:string = 'UsersComponent';

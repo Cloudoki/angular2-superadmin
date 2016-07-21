@@ -17,13 +17,13 @@ if (process.env.ENV === 'production') {
 }
 
 bootstrap(AppComponent, [
-	//BaseService,
-	Application,
-	AuthService,
-	APP_ROUTER_PROVIDERS,
-	HTTP_PROVIDERS,
-	disableDeprecatedForms(),
+  //BaseService,
+  Application,
+  AuthService,
+  APP_ROUTER_PROVIDERS,
+  HTTP_PROVIDERS,
+  disableDeprecatedForms(),
   provideForms(),
-	{ provide: LocationStrategy, useClass: HashLocationStrategy }
+  { provide: LocationStrategy, useClass: HashLocationStrategy }
 ])
 .catch(err => console.error(err));

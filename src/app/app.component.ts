@@ -11,5 +11,5 @@ require('css/manifest.js');
   styles: [require('./app.component.scss').toString()]
 })
 export class AppComponent {
-	constructor(_application:Application) {}
+  constructor(_application:Application) {}
 }
