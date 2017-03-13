@@ -2,10 +2,10 @@ import {APP_DATA} from '../../common/config';
 import { Component }   from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Application } from '../../common/application';
-import { SafeResourceUrl, DomSanitizationService } from '@angular/platform-browser';
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  templateUrl: './login.component.html',
+  template: require('./login.component.html'),
   /*template: `
     <div class="login"><div class="app-card p-30">
     <h2>LOGIN</h2>
@@ -20,7 +20,7 @@ export class LoginComponent {
   private message: string;
   private loginUrl: SafeResourceUrl;
 
-  constructor(private authService: AuthService, private _application:Application, private sanitizer: DomSanitizationService) {
+  constructor(private authService: AuthService, private _application:Application, private sanitizer: DomSanitizer) {
     this.setMessage();
     this.hasToken();
   }
@@ -28,6 +28,7 @@ export class LoginComponent {
   setloginwindow()
   {
     this.loginUrl = this.sanitizer.bypassSecurityTrustResourceUrl(APP_DATA.authurl + "login?response_type=token&client_id=" + APP_DATA.appid + "&redirect_uri=" + this.origin() + "/auth.html");
+    console.log(this.loginUrl)
   }
 
   hello()
@@ -36,27 +37,27 @@ export class LoginComponent {
     // init global application
     this._application.init(this.authService);
   }
-  
+
   hasToken()
   {
     // Authentication
     var token = window.localStorage.getItem('token');
-    
+
     if(token && token.length > 9) this.hello();
-    else  
+    else
     {
       if(token) window.localStorage.removeItem('token');
-          
+
       this.setloginwindow ();
-      window.addEventListener("message", this.receiveToken.bind(this), false);  
+      window.addEventListener("message", this.receiveToken.bind(this), false);
     }
   }
-  
+
   receiveToken(event:any)
   {
     if (event.origin !== this.origin())
     return;
-    
+
     if (event.data && event.data.length > 9)
     {
       window.localStorage.setItem('token', event.data);
@@ -82,7 +83,7 @@ export class LoginComponent {
       }
     });
   }*/
-  
+
   /*logout() {
     this.authService.logout();
     this.setMessage();

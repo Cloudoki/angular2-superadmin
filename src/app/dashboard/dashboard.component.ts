@@ -5,11 +5,11 @@ import { MenuComponent } from '../menu/menu.component';
 @Component({
     selector: 'app-dashboard',
     providers: [DashboardService],
-    directives: [MenuComponent],
-    templateUrl: './dashboard.component.html',
+    // directives: [MenuComponent],
+    template: require('./dashboard.component.html'),
     styles: [require('./dashboard.component.scss').toString()]
 })
-export class DashboardComponent {  
+export class DashboardComponent {
   private componentName:string = 'DashboardComponent';
   private panels:any = [];
   private error:boolean = false;

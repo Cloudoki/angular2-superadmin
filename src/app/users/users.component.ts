@@ -7,11 +7,11 @@ import * as _ from 'lodash';
 @Component({
   selector: 'app-users',
   providers: [UsersService],
-  directives: [MenuComponent],
-  templateUrl: './users.component.html',
+  // directives: [MenuComponent],
+  template: require('./users.component.html'),
   styles: [require('./users.component.scss').toString()]
 })
-export class UsersComponent {  
+export class UsersComponent {
   private componentName:string = 'UsersComponent';
   private users:any = [];
   private error:boolean = false;
@@ -20,7 +20,7 @@ export class UsersComponent {
   private model:User;
 
   constructor(_service:UsersService) {
-    
+
     _service.getData().subscribe(
       data => { this.users = data; },
       err => { this.error = true }

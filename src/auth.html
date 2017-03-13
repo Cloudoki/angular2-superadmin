@@ -21,7 +21,7 @@
 					return b;
 			})(window.location.search.substr(1).split('&'));
 			var token = qs['access_token']
-			//console.log(token);
+			console.log(token);
 			if (token && token.length && token !== '') {
 				window.parent.postMessage(token, window.location.origin ? window.location.origin : window.location.protocol + "//" + window.location.hostname);
 			}
