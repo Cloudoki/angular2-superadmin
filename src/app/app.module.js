@@ -19,7 +19,6 @@ var accounts_component_1 = require("./accounts/accounts.component");
 var team_component_1 = require("./team/team.component");
 var login_routes_1 = require("./auth/login/login.routes");
 var app_routes_1 = require("./app.routes");
-// import { Ng2SmartTableModule } from 'ng2-smart-table';
 var primeng_1 = require("primeng/primeng");
 var animations_1 = require("@angular/platform-browser/animations");
 var AppModule = (function () {

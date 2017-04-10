@@ -16,7 +16,6 @@ import { AUTH_PROVIDERS } from './auth/login/login.routes';
 
 import { AppRoutingModule } from './app.routes'
 
-// import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { DataTableModule,SharedModule, DialogModule, ButtonModule, InputTextModule } from 'primeng/primeng';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -34,7 +33,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ButtonModule,
     InputTextModule,
     BrowserAnimationsModule
-    // Ng2SmartTableModule
   ],
   declarations: [ AppComponent, LoginComponent, MenuComponent, UsersComponent, DashboardComponent, TableComponent, AccountsComponent, TeamComponent ],
   bootstrap:    [ AppComponent ],

@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
-  // directives: [ROUTER_DIRECTIVES],
   template: require('./menu.component.html'),
   styles: [require('./menu.component.scss').toString()]
 })

@@ -1,5 +1,5 @@
-# angular2-webpack
-Angular2 starter with webpack
+# Angular2 Webpack SuperAdmin
+Angular2 SuperAdmin with Webpack
 
 ## Features
 - Webpack;
@@ -21,7 +21,7 @@ The package is setup so you can easily add external packages to your project, wh
 
 
 ## npm scripts
-- **npm run start** will run webpack-dev-server and serve your contents `from memory only` on `http://127.0.0.1:8080`. You are ready to start developing
+- **npm run start** will run webpack-dev-server and serve your contents `from memory only` on `http://127.0.0.1:3000`. You are ready to start developing
 - **npm run clean** will clean the dist folder
 - **npm run build**
 

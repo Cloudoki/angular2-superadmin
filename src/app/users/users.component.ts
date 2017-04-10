@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 import { UsersService } from './users.service';
-import { MenuComponent } from '../menu/menu.component';
 import { User } from './user';
 import * as _ from 'lodash';
 
 @Component({
   selector: 'app-users',
   providers: [UsersService],
-  // directives: [MenuComponent],
   template: require('./users.component.html'),
   styles: [require('./users.component.scss').toString()]
 })

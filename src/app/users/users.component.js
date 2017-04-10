@@ -60,7 +60,6 @@ UsersComponent = __decorate([
     core_1.Component({
         selector: 'app-users',
         providers: [users_service_1.UsersService],
-        // directives: [MenuComponent],
         template: require('./users.component.html'),
         styles: [require('./users.component.scss').toString()]
     }),

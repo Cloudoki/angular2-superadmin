@@ -38,7 +38,6 @@ var MenuComponent = (function () {
 MenuComponent = __decorate([
     core_1.Component({
         selector: 'app-menu',
-        // directives: [ROUTER_DIRECTIVES],
         template: require('./menu.component.html'),
         styles: [require('./menu.component.scss').toString()]
     }),

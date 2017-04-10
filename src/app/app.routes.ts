@@ -13,9 +13,4 @@ export const routes: Routes = [
   ...TeamRoutes
 ];
 
-
 export const AppRoutingModule = RouterModule.forRoot(routes)
-// export const APP_ROUTER_PROVIDERS = [
-//   provideRouter(routes),
-//   AUTH_PROVIDERS
-// ];

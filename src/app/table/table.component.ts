@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { User } from '../users/user';
 import { Account } from '../accounts/account';
 
-
 @Component({
     selector: 'app-table',
     template: require('./table.component.html'),
