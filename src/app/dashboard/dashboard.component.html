@@ -30,6 +30,28 @@
 						</table>
 					</div>
 				</div>
+        <div class="col-sm-6">
+					<div class="app-card">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Unique Name</th>
+									<th>Name</th>
+									<th>Delete</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr *ngFor="let u of users">
+									<td>{{u.id}}</td>
+									<td>{{u.name}}</td>
+									<td>{{u.email}}</td>
+									<td><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
       </div>
 
 			<div class="row">

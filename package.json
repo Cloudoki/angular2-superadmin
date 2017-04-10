@@ -1,10 +1,10 @@
 {
-  "author": "Nuno Jorge",
+  "author": "Cloudoki",
   "license": "MIT",
-  "email": "nuno@cloudoki.com",
-  "name": "angular2-webpack",
+  "email": "claudio@cloudoki.com",
+  "name": "angular2-superadmin",
   "version": "1.0.0",
-  "description": "A webpack starter for angular 2",
+  "description": "Angular2 Superadmin with Webpack",
   "scripts": {
     "start": "set NODE_ENV=development && webpack-dev-server --inline --progress --port 3000",
     "test": "set NODE_ENV=test && karma start",

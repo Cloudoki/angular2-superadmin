@@ -24,7 +24,6 @@ export class MenuComponent {
   ngOnInit() {
     // remove hash from router name
     this.active = this.router.url.replace(/[^A-Z0-9]+/ig, "");
-    console.log("active", this.active)
   }
 
   ngOnDestroy() {}

@@ -26,7 +26,6 @@ var MenuComponent = (function () {
     MenuComponent.prototype.ngOnInit = function () {
         // remove hash from router name
         this.active = this.router.url.replace(/[^A-Z0-9]+/ig, "");
-        console.log("active", this.active);
     };
     MenuComponent.prototype.ngOnDestroy = function () { };
     MenuComponent.prototype.menuSelect = function (name) { };
