@@ -14,8 +14,14 @@ var login_component_1 = require("./auth/login/login.component");
 var menu_component_1 = require("./menu/menu.component");
 var users_component_1 = require("./users/users.component");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
+var table_component_1 = require("./table/table.component");
+var accounts_component_1 = require("./accounts/accounts.component");
+var team_component_1 = require("./team/team.component");
 var login_routes_1 = require("./auth/login/login.routes");
 var app_routes_1 = require("./app.routes");
+// import { Ng2SmartTableModule } from 'ng2-smart-table';
+var primeng_1 = require("primeng/primeng");
+var animations_1 = require("@angular/platform-browser/animations");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,9 +34,15 @@ AppModule = __decorate([
             app_routes_1.AppRoutingModule,
             // AUTH_PROVIDERS,
             http_1.HttpModule,
-            forms_1.FormsModule
+            forms_1.FormsModule,
+            primeng_1.DataTableModule,
+            primeng_1.SharedModule,
+            primeng_1.DialogModule,
+            primeng_1.ButtonModule,
+            primeng_1.InputTextModule,
+            animations_1.BrowserAnimationsModule
         ],
-        declarations: [app_component_1.AppComponent, login_component_1.LoginComponent, menu_component_1.MenuComponent, users_component_1.UsersComponent, dashboard_component_1.DashboardComponent],
+        declarations: [app_component_1.AppComponent, login_component_1.LoginComponent, menu_component_1.MenuComponent, users_component_1.UsersComponent, dashboard_component_1.DashboardComponent, table_component_1.TableComponent, accounts_component_1.AccountsComponent, team_component_1.TeamComponent],
         bootstrap: [app_component_1.AppComponent],
         providers: [login_routes_1.AUTH_PROVIDERS]
     })

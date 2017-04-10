@@ -18,12 +18,15 @@ var MenuComponent = (function () {
         this.componentName = 'MenuComponent';
         this.active = '';
         this.menus = [
-            { name: 'users', target: 'users' }
+            { name: 'users', target: 'users' },
+            { name: 'accounts', target: 'accounts' },
+            { name: 'manage', target: 'manage' }
         ];
     }
     MenuComponent.prototype.ngOnInit = function () {
         // remove hash from router name
         this.active = this.router.url.replace(/[^A-Z0-9]+/ig, "");
+        console.log("active", this.active);
     };
     MenuComponent.prototype.ngOnDestroy = function () { };
     MenuComponent.prototype.menuSelect = function (name) { };

@@ -19,6 +19,13 @@ export class UsersComponent {
   private order:string = 'desc';
   private model:User;
 
+  settings = [
+      {field: 'id', header: 'ID'},
+      {field: 'name', header: 'Name'},
+      {field: 'email', header: 'Email'},
+      {field: 'phone', header: 'Phone'}
+  ];
+
   constructor(_service:UsersService) {
 
     _service.getData().subscribe(

@@ -20,6 +20,12 @@ var UsersComponent = (function () {
         this.error = false;
         this.insert = false;
         this.order = 'desc';
+        this.settings = [
+            { field: 'id', header: 'ID' },
+            { field: 'name', header: 'Name' },
+            { field: 'email', header: 'Email' },
+            { field: 'phone', header: 'Phone' }
+        ];
         _service.getData().subscribe(function (data) { _this.users = data; }, function (err) { _this.error = true; });
         this.newUser();
     }

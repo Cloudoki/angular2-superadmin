@@ -1,0 +1,27 @@
+<div id="main">
+	<div class="menu">
+		<app-menu></app-menu>
+	</div>
+	<div class="content">
+
+    <div class="teamlist">
+
+    	<div *ngFor="let t of team" class="col-sm-6 col-md-4 col-lg-3">
+    		<a href="https://github.com/{{t.github}}" class="thumbnail thumbnail-round" target="_blank">
+    			<img src="{{t.avatar}}" alt="{{t.name}}">
+    		</a>
+
+    		<br><strong>{{t.name}}</strong>
+    		<br>
+
+    		<div class="icons">
+    			<a *ngIf="t.github" href="https://github.com/{{t.github}}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+    			<a *ngIf="t.twitter" href="https://twitter.com/{{t.twitter}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    			<a *ngIf="t.skype" href="skype:{{t.skype}}"><i class="fa fa-skype" aria-hidden="true"></i></a>
+    			<a *ngIf="t.email" href="mailto:{{t.email}}"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    		</div>
+
+    	</div>
+    </div>
+  </div>
+</div>
