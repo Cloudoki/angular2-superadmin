@@ -9,20 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var application_1 = require("./common/application");
-require('css/manifest.js');
-var AppComponent = (function () {
-    function AppComponent(_application) {
+var DropdownComponent = (function () {
+    function DropdownComponent() {
     }
-    return AppComponent;
+    DropdownComponent.prototype.ngOnInit = function () {
+        // TODO: GET the accounts from DB 
+        this.accounts = [
+            { label: 'Cloudoki', value: 'Cloudoki' },
+            { label: 'DonderLab', value: 'DonderLab' },
+            { label: 'Savvy', value: 'Savvy' }
+        ];
+    };
+    return DropdownComponent;
 }());
-AppComponent = __decorate([
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DropdownComponent.prototype, "selected", void 0);
+DropdownComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        providers: [application_1.Application],
-        template: require('./app.component.html'),
-        styles: [require('./app.component.scss').toString()]
-    }),
-    __metadata("design:paramtypes", [application_1.Application])
-], AppComponent);
-exports.AppComponent = AppComponent;
+        selector: 'dropdown',
+        template: require('./dropdown.component.html'),
+        styles: [require('./dropdown.component.scss').toString()]
+    })
+], DropdownComponent);
+exports.DropdownComponent = DropdownComponent;

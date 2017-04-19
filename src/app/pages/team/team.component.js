@@ -9,20 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var application_1 = require("./common/application");
-require('css/manifest.js');
-var AppComponent = (function () {
-    function AppComponent(_application) {
+var team_service_1 = require("../../services/team.service");
+var TeamComponent = (function () {
+    function TeamComponent(_service) {
+        var _this = this;
+        this.componentName = 'TeamComponent';
+        this.team = [];
+        this.error = false;
+        _service.getData().subscribe(function (data) { _this.team = data; }, function (err) { _this.error = true; });
     }
-    return AppComponent;
+    return TeamComponent;
 }());
-AppComponent = __decorate([
+TeamComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        providers: [application_1.Application],
-        template: require('./app.component.html'),
-        styles: [require('./app.component.scss').toString()]
+        selector: 'app-team',
+        providers: [team_service_1.TeamService],
+        template: require('./team.component.html'),
+        styles: [require('./team.component.scss').toString()]
     }),
-    __metadata("design:paramtypes", [application_1.Application])
-], AppComponent);
-exports.AppComponent = AppComponent;
+    __metadata("design:paramtypes", [team_service_1.TeamService])
+], TeamComponent);
+exports.TeamComponent = TeamComponent;

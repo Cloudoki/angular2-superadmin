@@ -73,11 +73,14 @@ h4 {
       li {
         font-size: 14px;
         text-transform: uppercase;
-        padding: 20px 15px;
+        // padding: 20px 15px;
+        padding: 0;
         min-height: 60px;
 
         a {
           color: #fff;
+          display:block;
+          padding: 19px;
 
           &:link, &:visited, &:hover, &:active {
             color: #fff;

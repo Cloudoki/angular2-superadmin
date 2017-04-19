@@ -11,15 +11,17 @@ var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var login_component_1 = require("./auth/login/login.component");
-var menu_component_1 = require("./menu/menu.component");
-var users_component_1 = require("./users/users.component");
-var dashboard_component_1 = require("./dashboard/dashboard.component");
-var table_component_1 = require("./table/table.component");
-var accounts_component_1 = require("./accounts/accounts.component");
-var team_component_1 = require("./team/team.component");
+var menu_component_1 = require("./components/menu/menu.component");
+var users_component_1 = require("./pages/users/users.component");
+var dashboard_component_1 = require("./pages/dashboard/dashboard.component");
+var table_component_1 = require("./components/table/table.component");
+var accounts_component_1 = require("./pages/accounts/accounts.component");
+var team_component_1 = require("./pages/team/team.component");
+var dropdown_component_1 = require("./components/dropdown/dropdown.component");
 var login_routes_1 = require("./auth/login/login.routes");
 var app_routes_1 = require("./app.routes");
 var primeng_1 = require("primeng/primeng");
+var ng_select_1 = require("ng-select");
 var animations_1 = require("@angular/platform-browser/animations");
 var AppModule = (function () {
     function AppModule() {
@@ -31,7 +33,6 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             app_routes_1.AppRoutingModule,
-            // AUTH_PROVIDERS,
             http_1.HttpModule,
             forms_1.FormsModule,
             primeng_1.DataTableModule,
@@ -39,9 +40,11 @@ AppModule = __decorate([
             primeng_1.DialogModule,
             primeng_1.ButtonModule,
             primeng_1.InputTextModule,
-            animations_1.BrowserAnimationsModule
+            animations_1.BrowserAnimationsModule,
+            primeng_1.DropdownModule,
+            ng_select_1.SelectModule
         ],
-        declarations: [app_component_1.AppComponent, login_component_1.LoginComponent, menu_component_1.MenuComponent, users_component_1.UsersComponent, dashboard_component_1.DashboardComponent, table_component_1.TableComponent, accounts_component_1.AccountsComponent, team_component_1.TeamComponent],
+        declarations: [app_component_1.AppComponent, login_component_1.LoginComponent, menu_component_1.MenuComponent, users_component_1.UsersComponent, dashboard_component_1.DashboardComponent, table_component_1.TableComponent, accounts_component_1.AccountsComponent, team_component_1.TeamComponent, dropdown_component_1.DropdownComponent],
         bootstrap: [app_component_1.AppComponent],
         providers: [login_routes_1.AUTH_PROVIDERS]
     })
